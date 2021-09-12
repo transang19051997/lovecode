@@ -34,7 +34,6 @@ $(window).resize(function() {
 })(jQuery);
 
 function timeElapse(date){
-	debugger
 	var current = new Date();
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
 	var days = Math.floor(seconds / (3600 * 24));
@@ -54,6 +53,6 @@ function timeElapse(date){
 	}
 	var result = "<span class=\"digit\">" + days + "</span> ngày <span class=\"digit\">" + hours + "</span> giờ <span class=\"digit\">" + minutes + "</span> phút <span class=\"digit\">" + seconds + "</span> giây"; 
 	$("#clock").html(result);
-	$("#meet-date").html(date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear());
+	$("#meet-date").html(date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear());
 	$("#now-date").html(current.getDate()+'/'+(current.getMonth()+1)+'/'+current.getFullYear());
 }
