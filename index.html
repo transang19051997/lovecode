@@ -3,6 +3,7 @@
 		<link rel="icon" type="image/png" href="image/favicon.ico">
 		<title>Tặng Phương</title>	    
         <link type="text/css" rel="stylesheet" href="./renxi/default.css">
+        <link type="text/css" rel="stylesheet" href="./renxi/index.css">
 		<script type="text/javascript" src="./renxi/jquery.min.js"></script>
 		<script type="text/javascript" src="./renxi/jscex.min.js"></script>
 		<script type="text/javascript" src="./renxi/jscex-parser.js"></script>
@@ -50,7 +51,24 @@
     
     <script>
     </script>
-
+    <script>
+            document.addEventListener("mousemove",(e)=>{
+            let body = document.querySelector("body");
+            let heart = document.createElement("span");
+            heart.className = "heart";
+            let x = e.offsetX;
+            let y = e.offsetY;
+            heart.style.left = x + "px";
+            heart.style.top = y + "px";
+            let size = Math.random() * 100;
+            heart.style.width = size + "px";
+            heart.style.height = size + "px";
+            body.appendChild(heart);
+            setTimeout(()=>{
+                heart.remove();
+            },2000)
+        })
+    </script>
     <script>
     (function(){
         var canvas = $('#canvas');
@@ -206,6 +224,7 @@
         runAsync().start();
     })();
     </script>
+
 </div>
 </body>
 </html>
