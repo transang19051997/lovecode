@@ -13,7 +13,8 @@
 		<script type="text/javascript" src="./renxi/jscex-async-powerpack.min.js"></script>
 		<script type="text/javascript" src="./renxi/functions.js" charset="utf-8"></script>
 		<script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
-	    <style type="text/css">
+	    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <style type="text/css">
 <!--
 .STYLE1 {color: #666666}
 -->
@@ -27,25 +28,35 @@
              <div id="wrap">
                 <div id="text">
 			        <div id="code">
-			      <font color="#0000FF">
-                        <span class="say">Hi Phương,</span><br>
-						<span class="say">Đây là web tỏ tình</span><br>
-						<span class="say">Nhưng mà anh thấy nó thú vị</span><br>
-						<span class="say">nên biến tấu lại cho em xem :v</span><br>
-						<span class="say">Để màu hồng cho lung linh</span><br>
-						<span class="say">Xem xong thì gửi thêm nhiều ảnh cho anh xem nha!!</span><br>
-                        <span class="say">Hihi</span><br>
-                        <span class="say"><img src="image/phuong.png" width="150px"></span>
-			  </font></p>
-      </div>
+                        <font color="#0000FF">
+                            <span class="say">Hello Phương,</span><br>
+                            <span class="say">Lại là anh đây</span><br>
+                            <span class="say">Lại là web cũ, nhưng anh xào nấu lại</span><br>
+                            <span class="say">Anh nợ em cũng lâu giờ mới trả cho em</span><br>
+                            <span class="say">Lần này anh thêm lời dụ ... </span><br>
+                            <span class="say">À nhầm rủ rê</span><br>
+                            <span class="say">Qua dịch mình đi ăn nhaaaa!</span><br>
+                        </font>
+                    </div>
+                    
+                </div>
+                <div class="btn-wrap display static" onclick="alert ('Mang theo cccd nhé ><, \nVà khi vui gửi thêm ảnh cho anh xem nhaaaa!');">
+                        <a href="https://zalo.me/0968949833" class="btn" title="Yes">
+                            <span> "Ok em chịu nà" <br><i class="fa fa-heart"></i></span>
+                        </a>
+                    </div>    
+                <div style="margin-left: 20px;" class="btn-wrap display tricky" onclick="alert ('Làm gì dữ vậy! Xí...');alert ('Không chịu cũng phải chịu, chọn lại điiii');">
+                    <a class="btn" title="No">
+                        <span>"Điên à! Cút Đi" <br><i class="fa fa-heart-broken"></i></span>
+                    </a>
                 </div>
                 <div id="clock-box">
                     <span class="STYLE1"></span><font color="#FF0000">See you ...</font><br>
                     <p><span id="meet-date"></span>~<span id="now-date"></span></p>
-                  <div id="clock"></div>
-              </div>
-                <canvas id="canvas" width="1100" height="680"></canvas>
+                <div id="clock"></div>
             </div>
+                <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
             
         </div>
     
@@ -197,12 +208,14 @@
         var textAnimate = eval(Jscex.compile("async", function () {
 		    var together = new Date();
 		    together.setFullYear(2021,5,11); 			
-		    together.setHours(0);							
-		    together.setMinutes(0);				
+		    together.setHours(22);							
+		    together.setMinutes(04);				
 		    together.setSeconds(0);					
 		    together.setMilliseconds(0);			
 
 		    $("#code").show().typewriter();
+            setTimeout(function(){ $(".btn-wrap").show(); }, 40000);
+           
             $("#clock-box").fadeIn(500);
             while (true) {
                 timeElapse(together);

@@ -56,3 +56,23 @@ function timeElapse(date){
 	$("#meet-date").html(date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear());
 	$("#now-date").html(current.getDate()+'/'+(current.getMonth()+1)+'/'+current.getFullYear());
 }
+$(function(){
+	$(".tricky").on({
+		mouseover:function(){
+			$(this).css({
+				left:(Math.random()*90)+"%",
+				top:(Math.random()*90)+"%",
+			});
+		}
+	});
+	$(".btn-wrap").hover(function() {
+		   $(this).toggleClass('active');
+	});
+});
+
+$('.tricky').bind('touchstart', function(){
+	$(this).css({
+		left:(Math.random()*90)+"%",
+		top:(Math.random()*90)+"%"
+	});
+})
