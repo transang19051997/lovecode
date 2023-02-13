@@ -15,7 +15,7 @@
 		<script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
 	    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 	    <link rel="stylesheet" href="./renxi/phaohoa.css">
-        <script type="text/javascript" src="./renxi/noel.js"></script>
+        <!-- <script type="text/javascript" src="./renxi/noel.js"></script> -->
         <style type="text/css">
 <!--
 .STYLE1 {color: #666666}
@@ -29,7 +29,7 @@
             
 			<audio id="iframeAudio">
 					<!-- <source src="music/Angel Baby - Troye Sivan (Slowed + Reverb).mp3" type="audio/mpeg" /> -->
-					<source src="music/Ariana Grande - Last Christmas (Lyrics)  Last Christmas I gave you my heart.m4a" type="audio/mpeg" />
+					<!-- <source src="music/Ariana Grande - Last Christmas (Lyrics)  Last Christmas I gave you my heart.m4a" type="audio/mpeg" /> -->
 			</audio>  
             <div class="pyro" style="display: none;">
                 <div class="before"></div>
@@ -40,17 +40,18 @@
                 <div id="text">
 			        <div id="code">
                         <font color="#0000FF">
-                            <span class="say">********************</span><br>
-                            <!-- <span class="say">Anh cạn ý tưởng rồi ..</span><br>
-                            <span class="say">Không biết làm gì cho mới</span><br>
-                            <span class="say">Thay hình khác cho mới</span><br> -->
-                            <span class="say">Edit: 2022-11-20</span><br>
-                            <span class="say">********************</span><br>
+                            <span class="say">Nhìn trời triệu triệu ngôi sao</span><br>
+                            <span class="say">Ta lại tự hỏi tại sao nhớ người. </span><br>
+                            <span class="say">Thế gian hàng vạn nụ cười</span><br>
+                            <span class="say">Nhưng anh chỉ nhớ nụ cười của Phương.</span><br>
+                            <span class="say">***Sang thi sĩ***</span><br>
+                            <span class="say" style="opacity: 0.1;">Love you</span><br>
                         </font>
                         <span style="float: right;"><a onclick="$('.pyro').toggle()"><img style="border-radius: 15px; width: 200px;" src="image/heart-girl2.jpg"/></a></span>
                         <!-- <span style="float: right;"><a onclick="$('.pyro').toggle()"><img style="border-radius: 15px; width: 150px;" src="image/banh-beo-girl.jpg"/></a></span> -->
                         <!-- <span style="float: right;"><a onclick="$('.pyro').toggle()"><img style="border-radius: 15px; width: 150px;" src="image/back-girl.jpg"/></a></span> -->
-                        <!-- <span style="float: right;"><a onclick="$('.pyro').toggle()"><img style="border-radius: 15px; width: 150px;" src="image/white-girl.jpg"/></a></span> -->
+                        <!-- <span style="float: right;"><a onclick="$('.pyro').toggle()"><img style="border-radius: 15px; width: 150px;" src="image/white-girl.jpg"/></a></span> -->  
+                        <span style="float: right;"><a onclick="window.location.href = 'gift.html'"><img style="border-radius: 15px; width: 150px;" src="image/gift.png"/></a></span>  
                     </div>
                     
                 </div>
@@ -231,8 +232,10 @@
 		    together.setSeconds(0);					
 		    together.setMilliseconds(0);			
 
-		    $("#code").show().typewriter();
-            setTimeout(function(){ $(".btn-wrap").show(); }, 40000);
+		    // $("#code").show().typewriter();
+		    $("#code").show();
+            // setTimeout(function(){ $(".btn-wrap").show(); }, 40000);
+            $(".btn-wrap").show();
            
             $("#clock-box").fadeIn(500);
             while (true) {
